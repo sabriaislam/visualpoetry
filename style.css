@@ -1,20 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-body{
+.link-1{
+	color: white;
+}
+
+a:hover{
+	background-color: lightblue;
+	mix-blend-mode: hard-light;
+}
+
+a.important-quotes:hover{
+	background-color: yellowgreen;
+	mix-blend-mode: hard-light;
+}
+
+a.feelings:hover{
+	background-color: purple;
+	mix-blend-mode: hard-light;
+}
+
+a.convo-blue:hover{
+	background-color: blue;
+	mix-blend-mode: hard-light;
+}
+
+a.convo-yellow:hover{
+	background-color: orange;
+	mix-blend-mode: hard-light;
+}
+
+.homepage-background{
 	height: 100%;
 	background-image: url("baby_blue.gif");
   	background-repeat: repeat;
   	background-size: 25%;
   	mix-blend-mode: hard-light;
-}
-
-.container{
-	display: grid;
+  	display: grid;
 	height: 100vh;
 	width: 100vw;
 	grid-template-columns: repeat(10, 1fr);
 	grid-template-rows: repeat(10, 1fr);
 }
+
 #intro-text {
 	display: flex;
 	flex-wrap: wrap;
@@ -27,11 +54,12 @@ body{
 	grid-column: 2/8;
 	grid-row: 3/8;
 }
+
 #author-text{
-	display: none;
+	display: block;
 	color: #FFFFFF;
 	background-color: rgba(62, 31, 71, 0.8);
-	padding: 2%;
+	padding: 5%;
 	font-family: 'Special Elite', cursive;
 	font-size: 3vmin;
 	grid-column: 6/8;
@@ -43,3 +71,66 @@ body{
 	grid-row: 9;
 	grid-column: 2;
 }
+
+.grid-container{
+	background-image: url("background-morgan.jpeg");
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: relative;
+}
+.poem-container{
+	display: grid;
+	z-index: 0;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 10%;
+	font-family: 'Special Elite', cursive;
+	font-size: 3vmin;
+	position: absolute;
+	color: ghostwhite;
+}
+
+.poem{
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.image-container{
+	display: grid;
+	z-index: -1;
+	grid-template-columns: repeat(8, 12.5%);
+	grid-template-rows: repeat(5, 20%) ;
+	position: absolute;
+}
+
+#morgan-1{
+	grid-column: 1;
+	grid-row: 3;
+	height: 100%;
+}
+
+#morgan-2{
+	grid-column: 6;
+	grid-row: 4;
+	height: 100%;
+}
+
+#morgan-3{
+	grid-column: 2;
+	grid-row: 2;
+	width: 100%;
+}
+
+#morgan-4{
+	grid-column: 6;
+	grid-row: 2;
+	height: 100%;
+	transform: scaleX(-1);
+}
+#morgan-5{
+	grid-column: 2;
+	grid-row: 4;
+	width: 100%;
+}
+
+
