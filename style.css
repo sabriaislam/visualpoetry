@@ -6,29 +6,32 @@
 
 /* Set up the animation */
 
-a:hover{
+a.text:hover, a:visited{
 	background-color: lightblue;
 	mix-blend-mode: hard-light;
-	font-size: 2.5vmax;
+	font-size: 2.2vmax;
+}
+a.image-hover:hover{
+	opacity: 0.5;
 }
 
 a.important-quotes:hover{
-	background-color: yellowgreen;
+	background-color: #F686BD;
 	mix-blend-mode: hard-light;
 }
 
 a.feelings:hover{
-	background-color: purple;
+	background-color: #66A182;
 	mix-blend-mode: hard-light;
 }
 
-a.convo-blue:hover{
-	background-color: blue;
+a.convo-a:hover{
+	background-color: #B6465F;
 	mix-blend-mode: hard-light;
 }
 
-a.convo-yellow:hover{
-	background-color: orange;
+a.convo-b:hover{
+	background-color: #788BFF;
 	mix-blend-mode: hard-light;
 }
 
@@ -85,7 +88,7 @@ a.convo-yellow:hover{
 .morgan-poem-container{
 	display: grid;
 	z-index: 0;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: 10%;
 	font-family: "p22-typewriter", sans-serif;
 	font-size: 3vmin;
@@ -97,7 +100,6 @@ a.convo-yellow:hover{
 	grid-column: 2;
 	grid-row: 2;
 	padding: 1em;
-	background-color: #07214a;
 	z-index: -1;
 }
 
@@ -136,7 +138,7 @@ a.convo-yellow:hover{
 #morgan-5{
 	grid-column: 2;
 	grid-row: 4;
-	width: 100%;
+	width: 150%;
 }
 
 .darwish-grid-container{
@@ -175,23 +177,28 @@ a.convo-yellow:hover{
 
 .khalil-grid-container{
 	display: grid;
-	background: radial-gradient(circle at center, rgba(232,234,255,1) 0%, rgba(0,0,0,1) 100%);
+	background-color: black;
+	background-image: 
+		radial-gradient(ellipse at top right, whitesmoke, transparent 40%),
+  		radial-gradient(ellipse at bottom left, whitesmoke, transparent 40%);
 	grid-template-areas:
 		". khalil-title khalil-title khalil-title ."
-		". stanza-1 stanza-1 . ."
+		"stanza-1 stanza-1 . . ."
 		"stanza-2 stanza-2 . . ."
-		". stanza-3 stanza-3 . ."
-		". . stanza-4 stanza-4 ."
+		"stanza-3 stanza-3 . . ."
+		"stanza-4 stanza-4 . . ."
 		"stanza-5 stanza-5 . . ."
-		". . stanza-6 stanza-6 ."
-		". stanza-7 stanza-7 . ."
+		". . . stanza-6 stanza-6"
+		". . . stanza-7 stanza-7"
 		". . . stanza-8 stanza-8"
-		". . stanza-9 stanza-9 ."
-		". . stanza-10 . .";
+		". . . stanza-9 stanza-9"
+		". . . stanza-10 stanza-10"
+		". . . khalil-author falling";
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(12, 1fr);
+	grid-template-rows: repeat(13, 1fr);
 	font-family: "p22-typewriter", sans-serif;
 	padding: 1em;
+	color: ghostwhite;
 }
 
 .khalil-title{
@@ -205,7 +212,6 @@ a.convo-yellow:hover{
 }
 .stanza-1{
 	grid-area: stanza-1;
-	color: #e8e8e8;
 }
 .stanza-2{
 	grid-area: stanza-2;
@@ -234,6 +240,52 @@ a.convo-yellow:hover{
 .stanza-10{
 	grid-area: stanza-10;
 }
+.khalil-author{
+	grid-area: khalil-author;
+}
+.falling-img{
+	height: 50%;
+	width: 50%;
+	grid-area: falling;
+}
+
+.last-page-container{
+	background-image: url("background-image.jpeg");
+	font-family: "p22-typewriter", sans-serif;
+	display: white;
+	font-size: 3em;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	position: relative;
+
+}
+
+.last-page-text-container{
+	display: grid;
+	position: absolute;
+	grid-template-columns: repeat(2, 1fr);
+
+
+}
+
+.last-page-img-container{
+	display: grid;
+	position: absolute;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-areas: 
+	". . ."
+	". lips ."
+	". . .";
+
+
+}
+
+.lips{
+	grid-area: lips;
+	height: 150%;
+}
+
 
 
 
